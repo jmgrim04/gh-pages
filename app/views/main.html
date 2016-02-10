@@ -1,0 +1,38 @@
+<body ng-controller="MainCtrl as tutorial">
+<div class="jumbotron">
+  <h1>Fun times with Angular!</h1>
+  <p class="lead">
+    <img src="images/angularjs.png" alt="AngularJS"><br>
+    The following information is all produced using a json file. Today we will learn how to reproduce that action by following a simple tutorial. When you are ready, click the tutorial button below.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/">Tutorial<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<!--<div class="row marketing">
+  <h4>HTML5 Boilerplate</h4>
+  <p>
+    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+  </p>
+
+  <h4>Angular</h4>
+  <p>
+    AngularJS is a toolset for building the framework most suited to your application development.
+  </p>
+
+  <h4>Karma</h4>
+  <p>Spectacular Test Runner for JavaScript.</p>
+</div>-->
+
+<div align="center">
+
+</div>
+
+<div class="container" ng-repeat="tutorial in tutorial.tutInfo ">
+    <div class="panel">
+        <h4>{{tutorial.title}}</h4>
+        <img src="{{tutorial.image}}" alt="{{tutorial.author}} image" />
+        <p>{{tutorial.author}}</p>
+        <a href="{{tutorial.url}}">{{tutorial.url}}</a>
+    </div>
+</div>
+    </body>
